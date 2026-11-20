@@ -1,0 +1,10 @@
+MEDICAL RECORD
+Patient: Jane Doe
+DOB: 01/15/1980
+Provider: City General Hospital
+Date of Service: 2024-03-01
+Diagnosis: S13.4XXA - Cervical strain
+Procedure: CPT 99213 - Office visit
+Charges: $250.00
+Total: $250.00
+The defendant rear-ended the patient's vehicle at a stoplight.

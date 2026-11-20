@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "medlegal-extract"
+version = "0.1.0"
+description = "Structured entity extraction from medical records, bills and legal documents with citations, validation and evals"
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.10"
+dependencies = [
+  "pydantic>=2",
+  "fastapi",
+  "uvicorn",
+  "pypdf",
+  "sqlalchemy>=2",
+]
+[project.optional-dependencies]
+ocr = ["pytesseract", "Pillow"]
+llm = ["anthropic", "openai"]
+dev = ["pytest", "httpx"]
+
+[project.scripts]
+medlegal = "medlegal_extract.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["medlegal_extract*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
